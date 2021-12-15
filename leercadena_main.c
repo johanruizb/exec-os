@@ -17,6 +17,10 @@ char **recortar(char* arg[], int inicio) {
 int main(int argc, char *argv[]) {
 //char comando[BUFSIZ];
   char **vector;
+ if (argc < 2) {
+ printf("Indique el programa que desea se ejecute\n");
+ return 0;
+ }
 
 printf("%s\n",argv[0]);
 printf("%s\n",argv[1]);
