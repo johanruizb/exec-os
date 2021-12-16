@@ -17,15 +17,13 @@ int main(int argc, char *argv[]) {
 
   if (strcmp("exit", argv[1]) == 0) {
      printf("> Comando: %s", vector[0]);
-     return 1;
+     return 0;
   }
 
-  int num = sizeof(*argv) / sizeof(char);
-
-  for (int i = 1; i < num; i++) {
+  for (int i = 1; i < argc; i++) {
        vector[i - 1] = argv[i];
   }
- 
+
   pid_t pid = fork();
 
   if (pid < 0) {
@@ -34,7 +32,7 @@ int main(int argc, char *argv[]) {
   } else if (pid == 0) {
     printf("> Comando: %s\n", vector[0]);
     execvp(vector[0], vector);
-    perror("Return from execlp() not expected");
+    perror ("Error inesperado de execvp()");
     exit(EXIT_FAILURE);
   } else {
     wait(NULL);
