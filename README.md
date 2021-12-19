@@ -8,6 +8,11 @@
     
     
 - [`Solucion final`](#solución-final)
+    
+    - [Solucion de Ingrid](#:~:text=el%20mismo%20resultado.-,Soluci%C3%B3n,-de%20Ingrid%20Echeverri)
+    
+    
+    - [Solucion de Johan](#:~:text=Solucion%20de%20Johan%20Andres%20Ruiz)
 ---
 
 
