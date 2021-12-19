@@ -9,10 +9,10 @@
     
 - [`Solucion final`](#solución-final)
     
-    - [Solucion de Ingrid](#:~:text=el%20mismo%20resultado.-,Soluci%C3%B3n,-de%20Ingrid%20Echeverri)
+    - [Solucion de Ingrid](https://github.com/johanruizb/exec-os#:~:text=el%20mismo%20resultado.-,Soluci%C3%B3n,-de%20Ingrid%20Echeverri)
     
     
-    - [Solucion de Johan](#:~:text=Solucion%20de%20Johan%20Andres%20Ruiz)
+    - [Solucion de Johan](https://github.com/johanruizb/exec-os#:~:text=Solucion%20de%20Johan%20Andres%20Ruiz)
 ---
 
 
