@@ -32,8 +32,7 @@ int main(int argc, char *argv[]) {
 char* vector[BUFSIZ];
 
   if (argc < 2) {
-    printf("Uso:\t> leercadena_johan <comando>\n
-    \t> leercadena_johan <comando> <-parametros>\n");
+    printf("Uso:\t> leercadena_johan <comando>\n\t> leercadena_johan <comando> <-parametros>\n");
     return 0;
   }
 
