@@ -9,10 +9,10 @@
     
 - [`Solucion final`](#solución-final)
     
-    - [Solucion de Ingrid](https://github.com/johanruizb/exec-os#:~:text=Soluci%C3%B3n%20de%20Ingrid%20Echeverri%20Montoya)
+    - [`Solucion de Ingrid`](https://github.com/johanruizb/exec-os#:~:text=Soluci%C3%B3n%20de%20Ingrid%20Echeverri%20Montoya)
     
     
-    - [Solucion de Johan](https://github.com/johanruizb/exec-os#:~:text=Solucion%20de%20Johan%20Andres%20Ruiz)
+    - [`Solucion de Johan`](https://github.com/johanruizb/exec-os#:~:text=Solucion%20de%20Johan%20Andres%20Ruiz)
 ---
 
 
@@ -29,7 +29,7 @@ Para empezar descargamos los archivos proporcionados por el profesor en el sigui
 -> make todo
 ```
 
-El cual nos genera  leercadena_main el cual podemos ejecutar utilizando
+El cual nos genera leercadena_main el cual podemos ejecutar utilizando
 ```bash
 ->./leercadena_main
 ```
@@ -46,7 +46,7 @@ Para el desarrollo del programa se intentó usar los atributos ‘argc’ y ‘a
 ```bash
 > ./leercadena_main.c ls -l
 ```
-El atributo ‘argc’ sería 3, ya que hay 3 argumentos que son ‘./leercadena_main.c’,  ‘ls’ y ‘ -l’ además de que son guardados en ‘argv’ de la siguiente manera  {  ‘./leercadena_main.c’,  ‘ls’, ‘ -l’ }. 
+El atributo ‘argc’ sería 3, ya que hay 3 argumentos que son ‘./leercadena_main.c’,‘ls’ y ‘ -l’ además de que son guardados en ‘argv’ de la siguiente manera{‘./leercadena_main.c’,‘ls’, ‘ -l’ }. 
 
 Entonces se planeó recortar ‘argv’ y pasarlo directamente a execvp() o bien concatenarlo y usar la función de_cadena_a_vector() proveída por el profesor para sacar el vector organizado.
 
@@ -55,7 +55,7 @@ En el transcurso del desarrollo encontramos varios problemas que solucionar para
 
 [Git asks for password to push on WSL 2 (Ubuntu), but not on Windows. Why is that? [closed]](https://stackoverflow.com/questions/66503781/git-asks-for-password-to-push-on-wsl-2-ubuntu-but-not-on-windows-why-is-that)
 
-Gracias a este comentario solucionamos el problema.  
+Gracias a este comentario solucionamos el problema.
 
 El siguiente problema causó bastante frustración porque al inicio no entendiamos como solucionarlo, esto fue el segmentation fault error.
 
