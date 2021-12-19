@@ -14,31 +14,22 @@
 #include "leercadena.h"
 
 int main(int argc, char *argv[]) {
-  char comando[BUFSIZ];
+  char comando[100];
   char **vector;
   int i;
-
-  while (1) {
-    pid_t pid;
-    printf("> ");
-    leer_de_teclado(BUFSIZ,comando);
-    if (strcmp("exit",comando) == 0) {
-      break;
+  if(argc < 2){
+    printf("Sin argumentos\n");
+  }else{
+    for(int i = 1; i < argc; i++){
+      printf("argv %d %s\n",i, argv[i]);
+      strcat(comando, argv[i]);
+      strcat(comando, " ");
     }
-    pid = fork();
-    if (pid < 0) {
-      perror("No se pudo crear un proceso\n");
-      exit(1);
-    } else if (pid == 0) {
-      vector = de_cadena_a_vector(comando);
-      execvp(vector[0],vector);
-      perror("Return from execlp() not expected");
-      exit(EXIT_FAILURE);
-    } else {
-      wait(NULL);
-    }
+    printf("Comando es: %s\n", comando);
+    vector = de_cadena_a_vector(comando);
+    execvp(vector[0], vector);
+    perror("Error en el exec\n");
   }
-
   return 0;
 }
 
