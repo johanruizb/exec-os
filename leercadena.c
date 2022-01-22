@@ -18,24 +18,27 @@
  * @param[out] tamano de la cadena leida
 */
 
-int leer_de_teclado(int size, char* cadena) {
+int leer_de_teclado(int size, char *cadena)
+{
   fgets(cadena, size, stdin);
   cadena[strlen(cadena) - 1] = '\x0';
 
   return strlen(cadena);
 }
 
-char** de_cadena_a_vector(char* cadena) {
+char **de_cadena_a_vector(char *cadena)
+{
   int i;
   char *token;
   char *delim = " ";
-  char** resultado;
+  char **resultado;
 
-  resultado = (char**)malloc(sizeof(char*));
+  resultado = (char **)malloc(sizeof(char *));
   assert(resultado != NULL);
   i = 0;
-  token = strtok(cadena,delim);
-  while ( token != NULL) {
+  token = strtok(cadena, delim);
+  while (token != NULL)
+  {
     int cad_longitud;
     char **result_temp;
     cad_longitud = strlen(token) + 1;
@@ -45,7 +48,7 @@ char** de_cadena_a_vector(char* cadena) {
     // En busca de la proxima cadena
     token = strtok(NULL, delim);
     i++;
-    result_temp = realloc(resultado, (i + 1)  * sizeof(*resultado));
+    result_temp = realloc(resultado, (i + 1) * sizeof(*resultado));
     assert(result_temp != NULL);
     resultado = result_temp;
   }

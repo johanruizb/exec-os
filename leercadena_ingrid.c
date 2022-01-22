@@ -13,15 +13,20 @@
 #include <unistd.h>
 #include "leercadena.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
   char comando[100];
   char **vector;
   int i;
-  if(argc < 2){
+  if (argc < 2)
+  {
     printf("Sin argumentos\n");
-  }else{
-    for(int i = 1; i < argc; i++){
-      printf("argv %d %s\n",i, argv[i]);
+  }
+  else
+  {
+    for (int i = 1; i < argc; i++)
+    {
+      printf("argv %d %s\n", i, argv[i]);
       strcat(comando, argv[i]);
       strcat(comando, " ");
     }
@@ -32,4 +37,3 @@ int main(int argc, char *argv[]) {
   }
   return 0;
 }
-

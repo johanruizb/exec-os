@@ -28,35 +28,44 @@
  * @param[out] int retorna 0, en caso de una ejecucion correcta
 */
 
-int main(int argc, char *argv[]) {
-char* vector[BUFSIZ];
+int main(int argc, char *argv[])
+{
+  char *vector[BUFSIZ];
 
-  if (argc < 2) {
+  if (argc < 2)
+  {
     printf("Uso:\t> leercadena_johan <comando>\n\t> leercadena_johan <comando> <-parametros>\n");
     return 0;
   }
 
-  if (strcmp("exit", argv[1]) == 0) {
-     printf("> Comando: %s", vector[0]);
-     return 0;
+  if (strcmp("exit", argv[1]) == 0)
+  {
+    printf("> Comando: %s", vector[0]);
+    return 0;
   }
 
   // Recortar y guardar 'argv' en 'vector'
-  for (int i = 1; i < argc; i++) {
+  for (int i = 1; i < argc; i++)
+  {
     vector[i - 1] = argv[i];
   }
 
   pid_t pid = fork();
 
-  if (pid < 0) {
+  if (pid < 0)
+  {
     perror("No se pudo crear el proceso\n");
     exit(1);
-  } else if (pid == 0) {
+  }
+  else if (pid == 0)
+  {
     printf("> Comando: %s\n", vector[0]);
     execvp(vector[0], vector);
     perror("Error inesperado de execvp()");
     exit(EXIT_FAILURE);
-  } else {
+  }
+  else
+  {
     wait(NULL);
   }
 
